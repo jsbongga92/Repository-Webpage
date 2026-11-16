@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3 Color Buttons</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .buttons {
+            padding: 30px;
+            background: white;
+            position: sticky;
+            top: 0;
+        }
+
+        button {
+            padding: 15px 35px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .red-btn { background: red; }
+        .blue-btn { background: blue; }
+        .black-btn { background: black; }
+
+        .color-section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        #red { background: red; }
+        #blue { background: blue; }
+        #black { background: black; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="buttons">
+        <button class="red-btn" onclick="goToColor('red')">
+            RED
+        </button>
+
+        <button class="blue-btn" onclick="goToColor('blue')">
+            BLUE
+        </button>
+
+        <button class="black-btn" onclick="goToColor('black')">
+            BLACK
+        </button>
+    </div>
+
+    <div id="red" class="color-section">
+        Love Baka Niya?
+    </div>
+
+    <div id="blue" class="color-section">
+        Ay Dili Man!
+    </div>
+
+    <div id="black" class="color-section">
+        Tarantado
+    </div>
+
+    <script>
+        function goToColor(color) {
+            document.getElementById(color).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+</html>
